@@ -53,7 +53,7 @@ public class Pawn extends ChessPiece {
 			}
 			/*Se a posição de duas linhas acima, existir e estiver vazia, ele pode mover para lá*/
 			p.setValues(position.getRow() + 2, position.getColumn());
-			Position p2 = new Position(position.getRow() - 1, position.getColumn());
+			Position p2 = new Position(position.getRow() + 1, position.getColumn());
 			if(getBoard().positionExists(p) && !getBoard().thereIsAPiece(p) && getMoveCount() == 0 && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2)) {
 				mat[p.getRow()][p.getColumn()] = true;
 			}
